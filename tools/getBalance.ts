@@ -36,5 +36,5 @@ export const getBalanceTool: ToolConfig<GetBalanceArgs> = {
 async function getBalance(wallet: string) {
   const publicClient = await createNearWalletClient();
   const balance = await publicClient.getAccountBalance();
-  return `Total: ${balance.total}, Available: ${balance.available}, Staked: ${balance.staked}`;
+  return `Total: ${Number(balance.total) / 10**24}, Available: ${Number(balance.available) / 10**24}, Staked: ${Number(balance.staked) / 10**24}`;
 }

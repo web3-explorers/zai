@@ -14,7 +14,7 @@ export async function createAssistant(client: OpenAI): Promise<Assistant> {
     // The model to use for the assistant.
     model: "gpt-4o-mini",
     // The name of the assistant.
-    name: "Darth Vader",
+    name: "ZAI",
     // The instructions to provide to the assistant.
     instructions: assistantPrompt,
     // The tools to provide to the assistant.
